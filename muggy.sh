@@ -1,25 +1,18 @@
 #!/bin/bash
 
-myday () {
-    neofetch
+addData () {
+    random=$((1 + RANDOM % 10))
+    temp=""
+    temp+="$random \n"
+    for ((i=1; i<=random; i++))
+    do 
+        temp+="mug "
+    done
+    return "$temp";
 }
-
-# myday
 
 for ((i=1; i<=10; i++))
 do
-    random=$((1 + RANDOM % 10))
-    # "loop $i" >> mug.txt
-    date >> mug.txt
-    echo "$random" >> mug.txt
-    for ((i=1; i<=random; i++))
-    do 
-        echo "mug" >> mug.txt
-    done
-    date
-    sleep 1
+    echo "$addData" >> mug.txt
+    sleep 5
 done
-
-
-# random
-echo $((1 + $RANDOM % 10))
