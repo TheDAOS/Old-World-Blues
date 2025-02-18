@@ -4,11 +4,12 @@ myday () {
     neofetch
 }
 
-myday
+# myday
 
 for ((i=1; i<=10; i++))
 do
-    echo "Current date:"
+    echo "Current date: "
+    date
     sleep 1
 done
 
