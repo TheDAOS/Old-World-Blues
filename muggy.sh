@@ -8,7 +8,14 @@ myday () {
 
 for ((i=1; i<=10; i++))
 do
-    echo "Current date: "
+    random=$((1 + RANDOM % 10))
+    # "loop $i" >> mug.txt
+    date >> mug.txt
+    echo "$random" >> mug.txt
+    for ((i=1; i<=random; i++))
+    do 
+        echo "mug" >> mug.txt
+    done
     date
     sleep 1
 done
@@ -16,14 +23,3 @@ done
 
 # random
 echo $((1 + $RANDOM % 10))
-
-#!/bin/bash
-
-# Create a file (or overwrite if it already exists)
-echo "" > output.txt
-
-# Loop 10 times and add "muggy" to the file
-for i in {1..10}
-do
-  echo "muggy" >> output.txt
-done
