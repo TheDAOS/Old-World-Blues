@@ -1,0 +1,36 @@
+# Compiled source files
+*.o
+*.out
+*.obj
+*.elf
+
+# Executable files
+*.exe
+*.bin
+
+# Shell history files
+*.bash_history
+*.zsh_history
+
+# Log files
+*.log
+
+# Temporary files
+*~
+*.swp
+*.tmp
+
+# Dependency directories
+node_modules/
+vendor/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build directories
+build/
+dist/
+
+# Environment files
+.env
