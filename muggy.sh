@@ -20,6 +20,8 @@ generate_muggy_quotes() {
         random_index=$((RANDOM % ${#muggy_quotes[@]}))
         current_date=$(date +"%b %d %Y")
         echo "$current_date: ${muggy_quotes[$random_index]}" >> muggy.md
+        git add --all
+        git commit -m "$current_date"
     done
 
     echo "" >> muggy.md
