@@ -13,6 +13,10 @@ muggy_quotes=(
     "Please, please, please tell me you stomped Dr. 0's brain into a fine paste! Did he squeal? did he beg? God, I hope he begged! Who's the flatware bitch now, O?!",
 )
 
-random_index=$((RANDOM % ${#muggy_quotes[@]}))
-current_date=$(date +"%b %d %Y")
-echo "$current_date: ${muggy_quotes[$random_index]}" >> muggy.md
+limit=$((RANDOM % 10 + 1))
+
+for ((i=0; i<limit; i++)); do
+    random_index=$((RANDOM % ${#muggy_quotes[@]}))
+    current_date=$(date +"%b %d %Y")
+    echo "$current_date: ${muggy_quotes[$random_index]}" >> muggy.md
+done
