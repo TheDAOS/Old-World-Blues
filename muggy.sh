@@ -28,4 +28,14 @@ generate_muggy_quotes() {
 }
 
 # Call the function
-generate_muggy_quotes
+# generate_muggy_quotes
+
+start_date="2020-01-01"
+end_date="2025-01-01"
+current_date="$start_date"
+
+while [[ "$current_date" < "$end_date" ]]; do
+    sudo date -s "$current_date"
+    generate_muggy_quotes
+    current_date=$(date -I -d "$current_date + 1 day")
+done
