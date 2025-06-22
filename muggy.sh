@@ -15,4 +15,4 @@ muggy_quotes=(
 
 random_index=$((RANDOM % ${#muggy_quotes[@]}))
 current_date=$(date +"%b %d %Y")
-echo "$current_date ${muggy_quotes[$random_index]}" >> muggy.md
+echo "$current_date: ${muggy_quotes[$random_index]}" >> muggy.md
