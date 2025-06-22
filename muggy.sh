@@ -20,3 +20,5 @@ for ((i=0; i<limit; i++)); do
     current_date=$(date +"%b %d %Y")
     echo "$current_date: ${muggy_quotes[$random_index]}" >> muggy.md
 done
+
+echo "" >> muggy.md
