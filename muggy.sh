@@ -13,3 +13,5 @@ muggy_quotes=(
     "Please, please, please tell me you stomped Dr. 0's brain into a fine paste! Did he squeal? did he beg? God, I hope he begged! Who's the flatware bitch now, O?!",
 )
 
+random_index=$((RANDOM % ${#muggy_quotes[@]}))
+echo "${muggy_quotes[$random_index]}" > muggy.md
